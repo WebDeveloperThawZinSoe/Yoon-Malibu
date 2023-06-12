@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RouteController;
-
+use App\Http\Controllers\CategoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +19,9 @@ Route::get('/',[RouteController::class,"index"]);
 
 
 Route::get("/admin-dashboard",[RouteController::class,"admin_dashboard"]);
+Route::get("/category/create",[CategoryController::class,"create"]);
+Route::post("/category/create",[CategoryController::class,"store"]);
+Route::get("/category/view",[CategoryController::class,"view"]);
 
 Route::middleware([
     'auth:sanctum',
