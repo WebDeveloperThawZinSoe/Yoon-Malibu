@@ -16,6 +16,10 @@ use App\Http\Controllers\RouteController;
 
 Route::get('/',[RouteController::class,"index"]);
 
+
+
+Route::get("/admin-dashboard",[RouteController::class,"admin_dashboard"]);
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
