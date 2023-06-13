@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RouteController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\AccountManagementController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,4 +35,10 @@ Route::middleware([
     Route::post("/category/create",[CategoryController::class,"store"]);
     Route::get("/category/view",[CategoryController::class,"view"]);
 
+
+    //Account
+    Route::get("/account",[AccountManagementController::class,"index"]);
+    Route::post("/account",[AccountManagementController::class,"store"]);
+    Route::post("/account/delete",[AccountManagementController::class,"delete"]);
+    Route::post("/account/password/update",[AccountManagementController::class,"password_update"]);
 });

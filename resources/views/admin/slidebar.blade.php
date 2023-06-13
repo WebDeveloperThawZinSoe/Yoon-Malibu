@@ -56,10 +56,13 @@
                             </div>
                             <div class="sb-sidenav-menu-heading">Configuration</div>
                             <a class="nav-link" href="charts.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-gear"></i></div>
                                 Social & Content
                             </a>
-                           
+                            <a class="nav-link" href="/account">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-user-alien"></i></div>
+                                Admin Account Management
+                            </a>
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
