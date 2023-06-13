@@ -41,4 +41,6 @@ Route::middleware([
     Route::post("/account",[AccountManagementController::class,"store"]);
     Route::post("/account/delete",[AccountManagementController::class,"delete"]);
     Route::post("/account/password/update",[AccountManagementController::class,"password_update"]);
+
+    //Menu
 });
