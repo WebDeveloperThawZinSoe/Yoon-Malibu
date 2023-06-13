@@ -15,7 +15,9 @@ use App\Http\Controllers\CategoryController;
 */
 
 Route::get('/',[RouteController::class,"index"]);
-
+Route::get("/register",function(){
+    return redirect("/login");
+});
 
 
 
@@ -25,11 +27,11 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get("/admin-dashboard",[RouteController::class,"admin_dashboard"]);
+    Route::get("/dashboard",[RouteController::class,"admin_dashboard"]);
+
+    //Category
     Route::get("/category/create",[CategoryController::class,"create"]);
     Route::post("/category/create",[CategoryController::class,"store"]);
     Route::get("/category/view",[CategoryController::class,"view"]);
-    // Route::get('/dashboard', function () {
-    //     return view('dashboard');
-    // })->name('dashboard');
+
 });
