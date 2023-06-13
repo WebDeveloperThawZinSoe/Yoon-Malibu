@@ -18,17 +18,18 @@ Route::get('/',[RouteController::class,"index"]);
 
 
 
-Route::get("/admin-dashboard",[RouteController::class,"admin_dashboard"]);
-Route::get("/category/create",[CategoryController::class,"create"]);
-Route::post("/category/create",[CategoryController::class,"store"]);
-Route::get("/category/view",[CategoryController::class,"view"]);
+
 
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get("/admin-dashboard",[RouteController::class,"admin_dashboard"]);
+    Route::get("/category/create",[CategoryController::class,"create"]);
+    Route::post("/category/create",[CategoryController::class,"store"]);
+    Route::get("/category/view",[CategoryController::class,"view"]);
+    // Route::get('/dashboard', function () {
+    //     return view('dashboard');
+    // })->name('dashboard');
 });
