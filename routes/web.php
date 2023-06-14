@@ -34,7 +34,13 @@ Route::middleware([
     Route::get("/category/create",[CategoryController::class,"create"]);
     Route::post("/category/create",[CategoryController::class,"store"]);
     Route::get("/category/view",[CategoryController::class,"view"]);
+    Route::get("/category/{id}/delete",[CategoryController::class,"delete"]);
 
+    //MCategory
+    Route::get("/mcategory/create",[CategoryController::class,"mcreate"]);
+    Route::post("/mcategory/create",[CategoryController::class,"mstore"]);
+    Route::get("/mcategory/view",[CategoryController::class,"mview"]);
+    Route::get("/mcategory/{id}/delete",[CategoryController::class,"mdelete"]);
 
     //Account
     Route::get("/account",[AccountManagementController::class,"index"]);

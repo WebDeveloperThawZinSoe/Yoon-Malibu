@@ -38,7 +38,7 @@
                         <td>
                             <button type="button" class="btn btn-sm btn-outline-primary">Update</button>
                             <button type="button" class="btn btn-sm btn-outline-success">Detail</button>
-                            <a href="/category/{{$data->id}}/delete" onclick="return  confirm('Are You Sure To Delete This Category ?')" class="btn btn-sm btn-outline-danger">Delete</a>
+                            <a href="/mcategory/{{$data->id}}/delete" onclick="return  confirm('Are You Sure To Delete This Category ?')" class="btn btn-sm btn-outline-danger">Delete</a>
                         </td>
                     </tr>
                     @endforeach
