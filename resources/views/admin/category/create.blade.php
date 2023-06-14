@@ -3,8 +3,10 @@
 @section("content")
 <div class="container">
     <br> <br>
+   
     <div class="row justify-content-md-center">
         <div class="col-md-10 col-md-offset-2">
+        <h3>Create Category For Yoon Kitchen</h3>
             <form method="post">
                 @csrf
                 <div class="form-group">

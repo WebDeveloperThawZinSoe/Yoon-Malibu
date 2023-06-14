@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RouteController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AccountManagementController;
+use App\Http\Controllers\MenuController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -49,4 +50,12 @@ Route::middleware([
     Route::post("/account/password/update",[AccountManagementController::class,"password_update"]);
 
     //Menu
+    Route::get("/menu/create",[MenuController::class,"create"]);
+    Route::post("/menu/create",[MenuController::class,"store"]);
+    Route::get("/menu/view",[MenuController::class,"view"]);
+
+    //Menu For Malibu
+    Route::get("/mmenu/create",[MenuController::class,"mcreate"]);
+    Route::post("/mmenu/create",[MenuController::class,"mstore"]);
+    Route::get("/mmenu/view",[MenuController::class,"mview"]);
 });
