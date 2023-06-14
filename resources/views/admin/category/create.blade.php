@@ -36,7 +36,11 @@
                     <tr>
                         <th scope="row">{{ ++$key }}</th>
                         <td>{{$data->name}}</td>
-                        <td>0</td>
+                        <td>
+                            @php 
+                                echo DB::table("menus")->where("category_id",$data->id)->count();
+                            @endphp
+                        </td>
                         <td>
                             <button type="button" class="btn btn-sm btn-outline-primary">Update</button>
                             <button type="button" class="btn btn-sm btn-outline-success">Detail</button>
