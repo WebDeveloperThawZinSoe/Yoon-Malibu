@@ -58,4 +58,6 @@ Route::middleware([
     Route::get("/mmenu/create",[MenuController::class,"mcreate"]);
     Route::post("/mmenu/create",[MenuController::class,"mstore"]);
     Route::get("/mmenu/view",[MenuController::class,"mview"]);
+    Route::get("/menu/{id}/delete",[MenuController::class,"delete"]);
+    Route::get("/mmenu/{id}/delete",[MenuController::class,"mdelete"]);
 });

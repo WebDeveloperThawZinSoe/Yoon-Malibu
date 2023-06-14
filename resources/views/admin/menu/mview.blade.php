@@ -7,7 +7,7 @@
     
     <div class="row justify-content-md-center">
         <div class="col-md-10 col-md-offset-2">
-        <h3> Menu For Yoon Kitchen</h3>
+        <h3> Menu For Malibu</h3>
          <br>
     <table class="table table-striped">
         <thead>
@@ -37,14 +37,14 @@
                     <td>
                             <button type="button" class="btn btn-sm btn-outline-primary">Update</button>
                             <button type="button" class="btn btn-sm btn-outline-success">Detail</button>
-                            <a href="/menu/{{$data->id}}/delete" onclick="return  confirm('Are You Sure To Delete This Category ?')" class="btn btn-sm btn-outline-danger">Delete</a>
+                            <a href="/mmenu/{{$data->id}}/delete" onclick="return  confirm('Are You Sure To Delete This Category ?')" class="btn btn-sm btn-outline-danger">Delete</a>
                     </td>
                 </tr>
             @endforeach
            
         </tbody>
         </table>
-            <center>
+        <center>
             {{ $datas->links() }}
             </center>
         </div>

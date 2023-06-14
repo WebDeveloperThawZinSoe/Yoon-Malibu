@@ -37,7 +37,7 @@
                             <div class="collapse" id="collapseLayoutsMalibu" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="/mmenu/create">Create</a>
-                                    <a class="nav-link" href="/menu/view">View</a>
+                                    <a class="nav-link" href="/mmenu/view">View</a>
                                 </nav>
                             </div>
                            

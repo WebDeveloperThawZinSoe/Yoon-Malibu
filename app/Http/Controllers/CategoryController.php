@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\MCategory;
+use App\Models\Menu;
+use App\Models\MMenu;
 
 class CategoryController extends Controller
 {
@@ -32,6 +34,7 @@ class CategoryController extends Controller
     //delete 
     public function delete($id){
         Category::find($id)->delete();
+        Menu::where("category_id",$id)->delete();
         session()->flash('success', 'Category Delete Success.');
         return back();
     }
@@ -60,6 +63,7 @@ class CategoryController extends Controller
     //mdelete 
     public function mdelete($id){
         MCategory::find($id)->delete();
+        MMenu::where("category_id",$id)->delete();
         session()->flash('success', 'Category Delete Success.');
         return back();
     }

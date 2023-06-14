@@ -76,12 +76,29 @@ class MenuController extends Controller
 
     //view
     public function view(){
-        $datas = Menu::orderBy("id","desc")->get();
+        $datas = Menu::orderBy("id","desc")->paginate(20);
         return view("admin.menu.view",compact("datas"));
     }
 
+    //mview
     public function mview(){
-        // $datas = Menu::orderBy("id","desc")->get();
-        // return view("admin.menu.view",compact("datas"));
+        $datas = MMenu::orderBy("id","desc")->paginate(20);
+        return view("admin.menu.mview",compact("datas"));
     }
+
+    //delete
+    public function delete($id){
+        Menu::find($id)->delete();
+        session()->flash('success', 'Menu For Yoon Kitchen Delete Success.');
+        return back();
+    }
+
+    //delete
+    public function mdelete($id){
+        MMenu::find($id)->delete();
+        session()->flash('success', 'Menu For Malibu Delete Success.');
+        return back();
+    }
+
 }
+
