@@ -65,4 +65,6 @@ Route::middleware([
     //Social Setting
     Route::get("/social-content-setting",[SocialSettingController::class,"index"]);
     Route::post("/social-content-setting/yoon",[SocialSettingController::class,"yoon_update"]);
+    Route::post("/social-content-setting/malibu",[SocialSettingController::class,"malibu_update"]);
+
 });

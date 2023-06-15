@@ -44,7 +44,7 @@
                             <div class="sb-sidenav-menu-heading">Configuration</div>
                             <a class="nav-link" href="/social-content-setting">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-gear"></i></div>
-                                Social & Content
+                                Social Configuration
                             </a>
                             <a class="nav-link" href="/account">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-user-alien"></i></div>
