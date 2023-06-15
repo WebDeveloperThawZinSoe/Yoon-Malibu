@@ -5,6 +5,7 @@ use App\Http\Controllers\RouteController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AccountManagementController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\SocialSettingController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -60,4 +61,8 @@ Route::middleware([
     Route::get("/mmenu/view",[MenuController::class,"mview"]);
     Route::get("/menu/{id}/delete",[MenuController::class,"delete"]);
     Route::get("/mmenu/{id}/delete",[MenuController::class,"mdelete"]);
+
+    //Social Setting
+    Route::get("/social-content-setting",[SocialSettingController::class,"index"]);
+    Route::post("/social-content-setting/yoon",[SocialSettingController::class,"yoon_update"]);
 });

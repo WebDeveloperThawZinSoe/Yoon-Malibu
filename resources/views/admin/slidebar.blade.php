@@ -42,7 +42,7 @@
                             </div>
                            
                             <div class="sb-sidenav-menu-heading">Configuration</div>
-                            <a class="nav-link" href="charts.html">
+                            <a class="nav-link" href="/social-content-setting">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-gear"></i></div>
                                 Social & Content
                             </a>

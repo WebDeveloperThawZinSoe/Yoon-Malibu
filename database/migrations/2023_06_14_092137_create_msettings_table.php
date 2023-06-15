@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string("ig")->nullable();
             $table->string("yt")->nullable();
             $table->text("address")->nullable();
+            $table->string("time")->nullable();
             $table->timestamps();
         });
     }
