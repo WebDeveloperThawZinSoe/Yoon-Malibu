@@ -68,7 +68,12 @@
                                 <button onclick="return confirm('Are You Sure To Delete This Account ?')" type="submit" class="btn btn-sm btn-outline-danger">Delete</button>
                             </form>
                             @else
-                            <p class="text text-danger">You Have No Permission </p>
+                                @if(Auth::user()->id == 1)
+                                    <button type="button" class="btn btn-sm btn-outline-primary"  style="display:inline;"  data-toggle="modal" data-target="#myModal{{$user->id}}" >Change Password</button>
+                                @else 
+                                    <p class="text text-danger">You Have No Permission </p>
+                                @endif
+                           
                             @endif
                           
                         </td>
