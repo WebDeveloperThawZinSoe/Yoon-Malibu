@@ -38,13 +38,14 @@ Route::middleware([
     Route::post("/category/create",[CategoryController::class,"store"]);
     Route::get("/category/view",[CategoryController::class,"view"]);
     Route::get("/category/{id}/delete",[CategoryController::class,"delete"]);
+    Route::post("/category/update",[CategoryController::class,"update"]);
 
     //MCategory
     Route::get("/mcategory/create",[CategoryController::class,"mcreate"]);
     Route::post("/mcategory/create",[CategoryController::class,"mstore"]);
     Route::get("/mcategory/view",[CategoryController::class,"mview"]);
     Route::get("/mcategory/{id}/delete",[CategoryController::class,"mdelete"]);
-
+    Route::post("/mcategory/update",[CategoryController::class,"mupdate"]);
     //Account
     Route::get("/account",[AccountManagementController::class,"index"]);
     Route::post("/account",[AccountManagementController::class,"store"]);

@@ -38,14 +38,47 @@
                         <th scope="row">{{ ++$key }}</th>
                         <td>{{$data->name}}</td>
                         <td>@php 
-                                echo DB::table("mmenus")->where("category_id",$data->id)->count();
+                                echo DB::table("m_menus")->where("category_id",$data->id)->count();
                             @endphp</td>
                         <td>
-                            <button type="button" class="btn btn-sm btn-outline-primary">Update</button>
+                            <button  data-toggle="modal" data-target="#mupdate{{$data->id}}" type="button" class="btn btn-sm btn-outline-primary">Update</button>
                             <button type="button" class="btn btn-sm btn-outline-success">Detail</button>
                             <a href="/mcategory/{{$data->id}}/delete" onclick="return  confirm('Are You Sure To Delete This Category ?')" class="btn btn-sm btn-outline-danger">Delete</a>
                         </td>
                     </tr>
+
+                     <!-- The Modal -->
+                     <div class="modal" id="mupdate{{$data->id}}">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                        
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                            <h4 class="modal-title">Update Category</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                            <form action="/category/update" method="post">
+                                <input type="hidden" name="id" value="{{$data->id}}">
+                                    @csrf
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Category : </label>
+                                        <input  type="text" required value="{{$data->name}}" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Category">
+                                       
+                                    </div>
+                                
+                                    <br> 
+                                    <button type="submit" class="btn btn-primary">Update</button>  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </form>
+                            </div>
+                            
+                            
+                            
+                        </div>
+                        </div>
+                    </div>
                     @endforeach
                 
                   </tbody>

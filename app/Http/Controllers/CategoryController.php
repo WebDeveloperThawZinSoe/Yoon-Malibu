@@ -68,4 +68,27 @@ class CategoryController extends Controller
         return back();
     }
 
+    //update
+    public function update(Request $request){
+
+        $name = $request->name;
+        $id = $request->id;
+        Category::where("id",$id)->update([
+            "name"=>$name,
+        ]);
+        session()->flash('success', 'Category Update Success.');
+        return back();
+    }
+
+    //mupdate
+    public function mupdate(Request $request){
+        $name = $request->name;
+        $id = $request->id;
+        MCategory::where("id",$id)->update([
+            "name"=>$name,
+        ]);
+        session()->flash('success', 'Category Update Success.');
+        return back();
+    }
+
 }
