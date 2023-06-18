@@ -1,6 +1,7 @@
 @extends('layouts.admin_app')
 @section('title',"Category Create")
 @section("content")
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
 <div class="container">
     <br> <br>
    
@@ -22,6 +23,7 @@
                 <button type="submit" class="btn btn-primary">Create</button>
             </form>
             <br> <br> <hr>
+            
             <table class="table table-striped">
                     <thead>
                         <tr>
@@ -42,11 +44,37 @@
                             @endphp
                         </td>
                         <td>
-                            <button type="button" class="btn btn-sm btn-outline-primary">Update</button>
+                            <button  data-toggle="modal" data-target="#update{{$data->id}}" type="button" class="btn btn-sm btn-outline-primary">Update</button>
                             <button type="button" class="btn btn-sm btn-outline-success">Detail</button>
                             <a href="/category/{{$data->id}}/delete" onclick="return  confirm('Are You Sure To Delete This Category ?')" class="btn btn-sm btn-outline-danger">Delete</a>
                         </td>
                     </tr>
+
+                    
+                    <!-- The Modal -->
+                    <div class="modal" id="update{{$data->id}}">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                        
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                            <h4 class="modal-title">Modal Heading</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                            Modal body..
+                            </div>
+                            
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                            
+                        </div>
+                        </div>
+                    </div>
                     @endforeach
                 
                   </tbody>

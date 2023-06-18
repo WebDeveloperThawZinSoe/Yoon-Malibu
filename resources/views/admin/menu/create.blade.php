@@ -13,7 +13,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Name ( <span style='color:red'>*</span> ) : </label>
-                            <input  type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Category">
+                            <input  type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name">
                             @error('name')
                                 <p id="emailHelp" class="form-text " style="color:red !important">{{ $message }}</p>
                             @enderror
@@ -47,7 +47,7 @@
                 <div class="col-md-6">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Price ( <span style='color:red'>*</span> ) : </label>
-                            <input  type="number" name="price" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Category">
+                            <input  type="number" name="price" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Price">
                             @error('price')
                                 <p id="emailHelp" class="form-text " style="color:red !important">{{ $message }}</p>
                             @enderror

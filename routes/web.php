@@ -6,6 +6,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\AccountManagementController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\SocialSettingController;
+use App\Http\Controllers\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -67,4 +68,9 @@ Route::middleware([
     Route::post("/social-content-setting/yoon",[SocialSettingController::class,"yoon_update"]);
     Route::post("/social-content-setting/malibu",[SocialSettingController::class,"malibu_update"]);
 
+    //contact
+    Route::get("/contact-data",[ContactController::class,"contact_data"]);
+
+    // About Content
+    Route::get("/about-content",[ContactController::class,"contact_data"]);
 });
