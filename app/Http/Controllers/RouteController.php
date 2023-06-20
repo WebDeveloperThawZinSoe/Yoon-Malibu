@@ -8,7 +8,7 @@ class RouteController extends Controller
 {
     //index
     public function index(){
-        return "Home Page";
+        return view("home");
     }
 
     // admin_dashboard
