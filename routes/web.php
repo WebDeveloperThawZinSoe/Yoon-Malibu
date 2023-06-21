@@ -19,6 +19,8 @@ use App\Http\Controllers\ContactController;
 */
 
 Route::get('/',[RouteController::class,"index"]);
+Route::get("/yoon",[RouteController::class,"yoon"]);
+
 Route::get("/register",function(){
     return redirect("/login");
 });

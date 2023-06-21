@@ -15,4 +15,9 @@ class RouteController extends Controller
     public function admin_dashboard(){
         return view("admin.dashboard");
     }
+
+    //yoon
+    public function yoon(){
+        return view("yoon.index");
+    }
 }

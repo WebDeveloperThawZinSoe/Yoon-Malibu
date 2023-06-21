@@ -44,8 +44,8 @@
         <div class="row justify-content-md-center">
             <div class="col-md-10">
                 
-                <p class="mbr-text mb-3 mbr-fonts-style display-5 btn btn-outline-danger" style="font-size: 
-                14px o !important;"><strong>Visit To Yoon Kitchen</strong></p>
+                <a href="/yoon" class="mbr-text mb-3 mbr-fonts-style display-5 btn btn-outline-danger" style="font-size: 
+                14px o !important;"><strong>Visit To Yoon Kitchen</strong></a>
                 
                 
             </div>
