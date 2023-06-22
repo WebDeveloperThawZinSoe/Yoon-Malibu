@@ -63,10 +63,10 @@
                                 </nav>
                             </div>
                             <div class="sb-sidenav-menu-heading">Configuration</div>
-                            <a class="nav-link" href="/contact-data">
+                            <!-- <a class="nav-link" href="/contact-data">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-gear"></i></div>
                                Contact Data Management
-                            </a>
+                            </a> -->
                             <a class="nav-link" href="/about-content">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-gear"></i></div>
                                About Page Content Management

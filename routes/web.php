@@ -87,4 +87,6 @@ Route::middleware([
     Route::get("/mevent/view",[EventController::class,"mview"]);
     Route::get("/event/{id}/delete",[EventController::class,"delete"]);
     Route::get("/mevent/{id}/delete",[EventController::class,"mdelete"]);
+    Route::post("/event/update",[EventController::class,"update"]);
+    Route::post("/mevent/update",[EventController::class,"mupdate"]);
 });

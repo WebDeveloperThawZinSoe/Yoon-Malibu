@@ -5,7 +5,8 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-<div class="container">
+
+  <div class="container">
     <br> <br>
    
     <div class="row justify-content-md-center">
@@ -88,7 +89,7 @@
                     </div>
 
                      <!-- The Modal -->
-                     <div class="modal" id="detail{{$data->id}}">
+                    <div class="modal" id="detail{{$data->id}}">
                         <div class="modal-dialog">
                         <div class="modal-content">
                         

@@ -97,4 +97,76 @@ class EventController extends Controller
         session()->flash('success', 'Event For Malibu Delete Success.');
         return back();
     }
+
+    //update
+    public function update(Request $request){
+        $validated = $request->validate([
+            'name' => 'required',
+            'date' => 'required',
+            'description' => 'required',
+        ]);
+
+        $id = $request->id;
+
+         //qr
+         $file = $request->image;
+         if($file == null){
+            Event::where("id",$id)->update([
+                "name" => $request->name,
+                "date" => $request->date,
+                "description" => $request->description,
+             ]);
+         }else{
+            $imageName = time().'.'. $file->getClientOriginalExtension();
+            $file->move(public_path('/event/'), $imageName);
+            $image_path = env('APP_URL') . '/event/'. $imageName;
+   
+            Event::where("id",$id)->update([
+               "name" => $request->name,
+               "date" => $request->date,
+               "description" => $request->description,
+               "image" => $image_path
+            ]);
+         }
+
+
+         session()->flash('success', 'Event Update Success.');
+        return back();
+    }
+
+    //mupdate
+    public function mupdate(Request $request){
+        $validated = $request->validate([
+            'name' => 'required',
+            'date' => 'required',
+            'description' => 'required',
+        ]);
+
+        $id = $request->id;
+
+         //qr
+         $file = $request->image;
+         if($file == null){
+            Event::where("id",$id)->update([
+                "name" => $request->name,
+                "date" => $request->date,
+                "description" => $request->description,
+             ]);
+         }else{
+            $imageName = time().'.'. $file->getClientOriginalExtension();
+            $file->move(public_path('/event/'), $imageName);
+            $image_path = env('APP_URL') . '/event/'. $imageName;
+   
+            MEvent::where("id",$id)->update([
+               "name" => $request->name,
+               "date" => $request->date,
+               "description" => $request->description,
+               "image" => $image_path
+            ]);
+         }
+
+
+         session()->flash('success', 'Event Update Success.');
+        return back();
+    }
 }
