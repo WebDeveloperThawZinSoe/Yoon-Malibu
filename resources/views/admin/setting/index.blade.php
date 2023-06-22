@@ -95,7 +95,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                         <label for="exampleInputEmail1">Lat : </label>
-                            <input  type="number" value="{{$setting->lat}}" name="lat" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                            <input  type="text" value="{{$setting->lat}}" name="lat" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
                             @error('lat')
                                 <p id="emailHelp" class="form-text " style="color:red !important">{{ $message }}</p>
                             @enderror
@@ -104,7 +104,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                         <label for="exampleInputEmail1">Long : </label>
-                            <input  type="number" name="long"  value="{{$setting->lat}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                            <input  type="text" name="long"  value="{{$setting->long}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
                             @error('long')
                                 <p id="emailHelp" class="form-text " style="color:red !important">{{ $message }}</p>
                             @enderror
@@ -212,7 +212,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                         <label for="exampleInputEmail1">Lat : </label>
-                            <input  type="number" value="{{$setting->lat}}" name="lat" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                            <input  type="textt" value="{{$msetting->lat}}" name="lat" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
                             @error('lat')
                                 <p id="emailHelp" class="form-text " style="color:red !important">{{ $message }}</p>
                             @enderror
@@ -221,7 +221,7 @@
                     <div class="col-md-6">
                         <div class="form-group">
                         <label for="exampleInputEmail1">Long : </label>
-                            <input  type="number" name="long"  value="{{$setting->lat}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+                            <input  type="text" name="long"  value="{{$msetting->long}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
                             @error('long')
                                 <p id="emailHelp" class="form-text " style="color:red !important">{{ $message }}</p>
                             @enderror

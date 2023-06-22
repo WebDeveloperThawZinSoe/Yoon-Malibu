@@ -22,6 +22,7 @@
         <link rel="stylesheet" href="{{ asset('front/assets/mobirise/css/mbr-additional.css') }}" type="text/css">
 
 
+
     </head>
     <body>
        
@@ -34,5 +35,13 @@
   <script src="{{ asset('front/assets/playervimeo/vimeo_player.js') }}"></script> 
    <script src="{{ asset('front/assets/theme/js/script.js') }}"></script>  
 
+
+<script src="{{ asset('front/assets/bootstrap/js/bootstrap.bundle.min.js') }}"></script>  
+<script src="{{ asset('front/assets/smoothscroll/smooth-scroll.js') }}"></script>  
+<script src="{{ asset('front/assets/ytplayer/index.js') }}"></script>  
+<script src="{{ asset('front/assets/dropdown/js/navbar-dropdown.js') }}"></script>  
+<script src="{{ asset('front/assets/embla/embla.min.js') }}"></script>  
+<script src="{{ asset('front/assets/embla/script.js') }}"></script>  
+<script src="{{ asset('front/assets/theme/js/script.js') }}"></script>  
     </body>
 </html>

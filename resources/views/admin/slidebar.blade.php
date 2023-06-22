@@ -40,7 +40,28 @@
                                     <a class="nav-link" href="/mmenu/view">View</a>
                                 </nav>
                             </div>
-                           
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#event" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Event ( Yoon )
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="event" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="/event/create">Create</a>
+                                    <a class="nav-link" href="/event/view">View</a>
+                                </nav>
+                            </div>
+                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#mevent" aria-expanded="false" aria-controls="collapseLayouts">
+                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                Event ( Malibu )
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                            </a>
+                            <div class="collapse" id="mevent" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="/mevent/create">Create</a>
+                                    <a class="nav-link" href="/mevent/view">View</a>
+                                </nav>
+                            </div>
                             <div class="sb-sidenav-menu-heading">Configuration</div>
                             <a class="nav-link" href="/contact-data">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-gear"></i></div>

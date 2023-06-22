@@ -208,7 +208,7 @@
     <br>
     <div class="position-relative">
         <div class="mbr-section-head">
-            <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>Events</strong></h4>
+            <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2" style="color:#a42826 !important"><strong>Events</strong></h4>
             
         </div>
         <div class="embla mt-4" data-skip-snaps="true" data-align="center" data-contain-scroll="trimSnaps" data-loop="true" data-auto-play="true" data-auto-play-interval="5" data-draggable="true">

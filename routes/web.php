@@ -7,6 +7,7 @@ use App\Http\Controllers\AccountManagementController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\SocialSettingController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\EventController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -76,4 +77,14 @@ Route::middleware([
 
     // About Content
     Route::get("/about-content",[ContactController::class,"contact_data"]);
+
+    //Event
+    Route::get("/event/create",[EventController::class,"create"]);  
+    Route::post("/event/create",[EventController::class,"store"]);
+    Route::get("/mevent/create",[EventController::class,"mcreate"]);
+    Route::post("/mevent/create",[EventController::class,"mstore"]);
+    Route::get("/event/view",[EventController::class,"view"]);
+    Route::get("/mevent/view",[EventController::class,"mview"]);
+    Route::get("/event/{id}/delete",[EventController::class,"delete"]);
+    Route::get("/mevent/{id}/delete",[EventController::class,"mdelete"]);
 });
