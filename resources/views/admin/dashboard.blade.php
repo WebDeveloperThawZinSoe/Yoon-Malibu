@@ -149,13 +149,13 @@
 
                 <span style="display:inline-block !important;font-size:24px;padding-left:20px">
                     <?php 
-                                    echo DB::table("menus")->count();
+                                    echo DB::table("events")->count();
                                     ?>
                 </span>
             </p>
         </div>
         <div class="card-footer d-flex align-items-center justify-content-between">
-            <a class="small  stretched-link" href="/menu/view">
+            <a class="small  stretched-link" href="/event/view">
                 View Details
             </a>
             <div class="small "><svg class="svg-inline--fa fa-angle-right" aria-hidden="true"
@@ -180,13 +180,13 @@
 
                 <span style="display:inline-block !important;font-size:24px;padding-left:20px">
                     <?php 
-                                    echo DB::table("m_menus")->count();
+                                    echo DB::table("m_events")->count();
                                     ?>
                 </span>
             </p>
         </div>
         <div class="card-footer d-flex align-items-center justify-content-between">
-            <a class="small  stretched-link" href="/mmenu/view">
+            <a class="small  stretched-link" href="/mevent/view">
                 View Details
             </a>
             <div class="small "><svg class="svg-inline--fa fa-angle-right" aria-hidden="true"
