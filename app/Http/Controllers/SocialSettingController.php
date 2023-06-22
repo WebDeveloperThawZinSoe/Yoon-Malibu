@@ -21,7 +21,9 @@ class SocialSettingController extends Controller
             'phone' => 'required',
             'email' => 'required',
             'time' => 'required',
-            'address' => 'required'
+            'address' => 'required',
+            'lat' => 'required',
+            'long' => 'required',
         ]);
         
         $phone = $request->phone;
@@ -31,6 +33,8 @@ class SocialSettingController extends Controller
         $fb = $request->facebook;
         $ig = $request->ig;
         $youtube = $request->youtube;
+        $lat = $request->lat;
+        $long = $request->long;
         
         Setting::where("id", 1)->update([
             "phone" => $phone,
@@ -39,7 +43,9 @@ class SocialSettingController extends Controller
             "address" => $address,
             "fb" => $fb,
             "ig" => $ig,
-            "yt" => $youtube
+            "yt" => $youtube ,
+            "lat" => $lat,
+            "long" => $long
         ]);
         
         session()->flash('success', 'Setting Update Success.');
@@ -52,7 +58,9 @@ class SocialSettingController extends Controller
             'phone' => 'required',
             'email' => 'required',
             'time' => 'required',
-            'address' => 'required'
+            'address' => 'required',
+            'lat' => 'required',
+            'long' => 'required',
         ]);
         
         $phone = $request->phone;
@@ -62,7 +70,10 @@ class SocialSettingController extends Controller
         $fb = $request->facebook;
         $ig = $request->ig;
         $youtube = $request->youtube;
-        
+        $lat = $request->lat;
+        $long = $request->long;
+
+
         msetting::where("id", 1)->update([
             "phone" => $phone,
             "email" => $email,
@@ -70,7 +81,9 @@ class SocialSettingController extends Controller
             "address" => $address,
             "fb" => $fb,
             "ig" => $ig,
-            "yt" => $youtube
+            "yt" => $youtube,
+            "lat" => $lat,
+            "long" => $long
         ]);
         
         session()->flash('success', 'Setting Update Success.');
