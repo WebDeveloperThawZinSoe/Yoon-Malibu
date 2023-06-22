@@ -214,72 +214,33 @@
         <div class="embla mt-4" data-skip-snaps="true" data-align="center" data-contain-scroll="trimSnaps" data-loop="true" data-auto-play="true" data-auto-play-interval="5" data-draggable="true">
             <div class="embla__viewport container-fluid">
                 <div class="embla__container">
-                    <div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
-                        <div class="slide-content">
-                            <div class="item-wrapper">
-                                <div class="item-img">
-                                    <img src="{{ asset('/front/assets/images/product5.jpg')}}" alt="Mobirise Website Builder" title="">
+
+                    <?php 
+                        $events = DB::table("events")->get();
+                        foreach($events as $event){
+                            ?>
+                        <div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
+                            <div class="slide-content">
+                                <div class="item-wrapper">
+                                    <div class="item-img">
+                                        <img src="{{$event->image}}" alt="Mobirise Website Builder" title="">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="item-content">
-                                <h5 class="item-title mbr-fonts-style display-4"><em>Jan 10, 2025</em></h5>
-                                <h6 class="item-subtitle mbr-fonts-style mt-1 display-7"><strong>Easy and Simple</strong></h6>
-                                <p class="mbr-text mbr-fonts-style mt-3 display-7">Mobirise Page Maker is a free and simple
-                                    website builder - just drop site blocks to your page, add content and style it!</p>
-                            </div>
-                            <div class="mbr-section-btn item-footer mt-2"><a href="" class="btn item-btn btn-primary-outline display-7" target="_blank" style="color:#a42826 !important">Read More &gt;</a></div>
-                        </div>
-                    </div>
-                    <div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
-                        <div class="slide-content">
-                            <div class="item-wrapper">
-                                <div class="item-img">
-                                    <img src="{{ asset('/front/assets/images/product4.jpg')}}" alt="Mobirise Website Builder" title="">
+                                <div class="item-content">
+                                    <h5 class="item-title mbr-fonts-style display-4"><em>{{$event->date}}</em></h5>
+                                    <h6 class="item-subtitle mbr-fonts-style mt-1 display-7"><strong>{{$event->name}}</strong></h6>
+                                    <p class="mbr-text mbr-fonts-style mt-3 display-7">
+                                        {{$event->description}}
+                                    </p>
                                 </div>
+                                <!-- <div class="mbr-section-btn item-footer mt-2"><a href="" class="btn item-btn btn-primary-outline display-7" target="_blank" style="color:#a42826 !important">Read More &gt;</a></div> -->
                             </div>
-                            <div class="item-content">
-                                <h5 class="item-title mbr-fonts-style display-4"><em>Jan 09, 2025</em></h5>
-                                <h6 class="item-subtitle mbr-fonts-style mt-1 display-7"><strong>Automagically Mobile</strong>
-                                </h6>
-                                <p class="mbr-text mbr-fonts-style mt-3 display-7">Mobirise Site Creator offers a huge
-                                    collection of 3500+ site blocks, templates and themes with thousands flexible options. <br>
-                                </p>
-                            </div>
-                            <div class="mbr-section-btn item-footer mt-2"><a href="" class="btn item-btn btn-primary-outline display-7" target="_blank" style="color:#a42826 !important">Read More &gt;</a></div>
                         </div>
-                    </div>
-                    <div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
-                        <div class="slide-content">
-                            <div class="item-wrapper">
-                                <div class="item-img">
-                                    <img src="{{ asset('/front/assets/images/product3.jpg')}}" alt="Mobirise Website Builder" title="">
-                                </div>
-                            </div>
-                            <div class="item-content">
-                                <h5 class="item-title mbr-fonts-style display-4"><em>Jan 08, 2025</em></h5>
-                                <h6 class="item-subtitle mbr-fonts-style mt-1 display-7"><strong>Boost Your Ranking</strong></h6>
-                                <p class="mbr-text mbr-fonts-style mt-3 display-7">Mobirise Page Maker is a free and simple
-                                    website builder - just drop site blocks to your page, add content and style it!</p>
-                            </div>
-                            <div class="mbr-section-btn item-footer mt-2"><a href="" class="btn item-btn btn-primary-outline display-7" target="_blank" style="color:#a42826 !important">Read More &gt;</a></div>
-                        </div>
-                    </div>
-                    <div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
-                        <div class="slide-content">
-                            <div class="item-wrapper">
-                                <div class="item-img">
-                                    <img src="{{ asset('/front/assets/images/product4.jpg')}}" alt="Mobirise Website Builder" title="">
-                                </div>
-                            </div>
-                            <div class="item-content">
-                                <h5 class="item-title mbr-fonts-style display-4"><em>Jan 08, 2025</em></h5>
-                                <h6 class="item-subtitle mbr-fonts-style mt-1 display-7"><strong>Boost Your Ranking</strong></h6>
-                                <p class="mbr-text mbr-fonts-style mt-3 display-7">Mobirise Page Maker is a free and simple
-                                    website builder - just drop site blocks to your page, add content and style it!</p>
-                            </div>
-                            <div class="mbr-section-btn item-footer mt-2"><a href="" class="btn item-btn btn-primary-outline display-7" target="_blank" style="color:#a42826 !important">Read More &gt;</a></div>
-                        </div>
-                    </div>
+                            <?php
+                        }
+                    ?>
+                    
+
                 </div>
             </div>
             <button class="embla__button embla__button--prev">
