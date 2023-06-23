@@ -22,6 +22,7 @@ use App\Http\Controllers\AboutController;
 
 Route::get('/',[RouteController::class,"index"]);
 Route::get("/yoon",[RouteController::class,"yoon"]);
+Route::get("/malibu",[RouteController::class,"malibu"]);
 
 Route::get("/register",function(){
     return redirect("/login");

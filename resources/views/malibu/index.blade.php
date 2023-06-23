@@ -1,12 +1,12 @@
-@extends('layouts.home')
-@section('title',"Yoon Kitchen")
+@extends('layouts.mhome')
+@section('title',"Malibu")
 @section("content")
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 <style>
     .mbr-iconfont{
-        color:#a42826 !important
+        color:#9cbbe3 !important
     }
     .cid-tHHI6RHDKt {
         padding-top : 2rem !important;
@@ -17,7 +17,7 @@
         border-color: #e9e9e9 !important;
     }
     .nav-tabs .nav-link.active {
-        color:#a42826 !important
+        color:#9cbbe3 !important
     }
     /* Mobile View */
     @media (max-width: 767px) {
@@ -45,7 +45,7 @@
 
     
 </style>
-    @include('yoon.nav')
+    @include('malibu.nav')
     
     <section data-bs-version="5.1" class="slider1 cid-tHHMYJhgtP" id="slider1-w">
     
@@ -101,17 +101,17 @@
             <div class="col-12 col-md">
                 <div class="text-wrapper">
                     <h2 class="mbr-section-title mb-3 mbr-fonts-style display-2">
-                        <strong>Yoon Kitchen</strong></h2>
+                        <strong style="color:#9cbbe3 !important">Malibu</strong></h2>
                     <p class="mbr-text mb-3 mbr-fonts-style display-7">
                         <?php 
                            $content = DB::table("abouts")->where("id",1)->first();
                         ?>
-                       {!! $content->y_about !!}
+                       {!! $content->m_about !!}
                     </p>
-                    <div class="mbr-section-btn"><a style="background-color:#a42826 !important" class="btn btn-secondary display-4" href="#menu">View Menu</a></div>
+                    <div class="mbr-section-btn"><a style="background-color:#9cbbe3  !important" class="btn btn-secondary display-4" href="#menu">View Menu</a></div>
                 </div>
             </div>
-            <div class="mbr-figure col-12 col-md-7"><iframe class="mbr-embedded-video" src="https://player.vimeo.com/video/837822164?autoplay=1&amp;loop=0" width="800" height="600" frameborder="0" allowfullscreen></iframe></div>
+            <!-- <div class="mbr-figure col-12 col-md-7"><iframe class="mbr-embedded-video" src="https://player.vimeo.com/video/837822164?autoplay=1&amp;loop=0" width="800" height="600" frameborder="0" allowfullscreen></iframe></div> -->
         </div>
     </div>
 </section>
@@ -120,8 +120,8 @@
       <div class="container aos-init aos-animate" data-aos="fade-up">
 
         <div class="section-header">
-          <h2 class="text-center cid-tHHI6RHDKt mbr-section-title display-2 " > <strong  >Our Menu</strong> </h2>
-          <p  class="text-center" style="font-family: 'Open Sans', sans-serif;font-size:18px;color:#a42826 !important;padding-bottom:20px !important" >Check Our <span>Yummy Menu</span></p>
+          <h2 class="text-center cid-tHHI6RHDKt mbr-section-title display-2 " > <strong style="color:#9cbbe3 !important" >Our Menu</strong> </h2>
+          <p  class="text-center" style="font-family: 'Open Sans', sans-serif;font-size:18px;color:#9cbbe3 !important;padding-bottom:20px !important" >Check Our <span>Yummy Menu</span></p>
         </div>
 
         <ul class="nav nav-tabs d-flex justify-content-center aos-init aos-animate" data-aos="fade-up" data-aos-delay="200" role="tablist">
@@ -133,7 +133,7 @@
           </li><!-- End tab nav item -->
 
          <?php 
-                $cats = DB::table("categories")->get();
+                $cats = DB::table("m_categories")->get();
                 foreach($cats as $cat){
                     ?>
                 <li class="nav-item" role="presentation">
@@ -241,7 +241,7 @@
     <br>
     <div class="position-relative">
         <div class="mbr-section-head">
-            <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2" style="color:#a42826 !important"><strong>Events</strong></h4>
+            <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2" style="color:#9cbbe3 !important"><strong>Events</strong></h4>
             
         </div>
         <div class="embla mt-4" data-skip-snaps="true" data-align="center" data-contain-scroll="trimSnaps" data-loop="true" data-auto-play="true" data-auto-play-interval="5" data-draggable="true">
@@ -249,7 +249,7 @@
                 <div class="embla__container">
 
                     <?php 
-                        $events = DB::table("events")->get();
+                        $events = DB::table("m_events")->get();
                         foreach($events as $event){
                             ?>
                         <div class="embla__slide slider-image item" style="margin-left: 1rem; margin-right: 1rem;">
@@ -297,18 +297,18 @@
     <div class="container">
         <div class="mbr-section-head">
             <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                <strong>Contacts</strong>
+                <strong style="color:#9cbbe3 !important">Contacts</strong>
             </h3>
             
         </div>
         <?php 
-           $settings = DB::table("settings")->where("id",1)->first();
+           $settings = DB::table("msettings")->where("id",1)->first();
         ?>
         <div class="row justify-content-center mt-4">
             <div class="card col-12 col-md-6">
                 <div class="card-wrapper">
                     <div class="image-wrapper">
-                        <span class="mbr-iconfont mobi-mbri-phone mobi-mbri" style="color:#a42826 !important"></span>
+                        <span class="mbr-iconfont mobi-mbri-phone mobi-mbri" style="color:#9cbbe3 !important"></span>
                     </div>
                     <div class="text-wrapper">
                         <h6 class="card-title mbr-fonts-style mb-1 display-5">
@@ -368,5 +368,5 @@
         </div>
     </div>
 </section>
-    @include('yoon.footer')
+    @include('malibu.footer')
 @endsection

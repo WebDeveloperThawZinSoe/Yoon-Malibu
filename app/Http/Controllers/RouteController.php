@@ -20,4 +20,9 @@ class RouteController extends Controller
     public function yoon(){
         return view("yoon.index");
     }
+
+    //malibu
+    public function malibu(){
+        return  view("malibu.index");
+    }
 }

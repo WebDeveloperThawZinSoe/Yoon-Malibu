@@ -64,8 +64,8 @@
     <div class="align-center container">
         <div class="row justify-content-md-center">
             <div class="col-md-10">
-                <p class="mbr-text mb-3 mbr-fonts-style display-5 btn btn-outline-primary" style="font-size: 
-                14px o !important;"><strong>Visit To Malibu</strong></p>
+                <a href="/malibu"  class="mbr-text mb-3 mbr-fonts-style display-5 btn btn-outline-primary" style="font-size: 
+                14px o !important;"><strong>Visit To Malibu</strong></a>
                
                 
                 
