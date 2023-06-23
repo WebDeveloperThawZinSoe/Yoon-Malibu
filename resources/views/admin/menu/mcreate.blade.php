@@ -44,7 +44,7 @@
                 <div class="row">
 
               
-                <div class="col-md-6">
+                <!-- <div class="col-md-6">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Price ( <span style='color:red'>*</span> ) : </label>
                             <input  type="number" name="price" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Category">
@@ -53,9 +53,9 @@
                             @enderror
                         
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Image ( <span style='color:red'>*</span> ) : </label>
                             <input  type="file" name="image" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Category">

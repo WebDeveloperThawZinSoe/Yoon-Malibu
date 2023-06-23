@@ -20,7 +20,7 @@ class MenuController extends Controller
         $validated = $request->validate([
             'name' => 'required',
             'category' => 'required',
-            'price' => 'required',
+            // 'price' => 'required',
             'image' => 'required'
         ]);
 
@@ -33,7 +33,6 @@ class MenuController extends Controller
          Menu::insert([
             "name" => $request->name,
             "category_id" => $request->category,
-            "price" => $request->price,
             "image" => $image_path
          ]);
 
@@ -52,7 +51,7 @@ class MenuController extends Controller
         $validated = $request->validate([
             'name' => 'required',
             'category' => 'required',
-            'price' => 'required',
+            // 'price' => 'required',
             'image' => 'required'
         ]);
 
@@ -65,7 +64,7 @@ class MenuController extends Controller
          MMenu::insert([
             "name" => $request->name,
             "category_id" => $request->category,
-            "price" => $request->price,
+            // "price" => $request->price,
             "image" => $image_path
          ]);
 

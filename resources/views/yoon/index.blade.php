@@ -109,7 +109,7 @@
                     ?>
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" data-bs-toggle="tab" data-bs-target="#menu-{{$cat->id}}" aria-selected="false" tabindex="-1" role="tab">
-                    <h4>{{$cat->name}}</h4>
+                    <h3>{{$cat->name}}</h4>
                     </a>
                 </li><!-- End tab nav item -->
                     <?php
@@ -127,6 +127,7 @@
             <div class="tab-header text-center">
               <p>Menu</p>
               <h3>All</h3>
+              <br>
             </div>
 
             <div class="row gy-5">
@@ -139,13 +140,14 @@
               
             ?>
               <div class="col-lg-4 menu-item">
-                <a href="{{$menu->image}}" class="glightbox"><img src="{{$menu->image}}" class="menu-img img-fluid" alt=""></a>
-                <h4>{{$menu->name}}</h4>
+                <a target="_blank" href="{{$menu->image}}" class="glightbox"><img src="{{$menu->image}}" class="menu-img img-fluid" alt=""></a>
+                <br> 
+                <h3 class="text-center">{{$menu->name}}</h3>
                 <p class="ingredients">
                 {{$menu->description}}
                 </p>
                 <p class="price">
-                <b>{{$menu->price}}</b> Kyats
+                    <!-- <h4 class="text-center">{{$menu->price}} Kyats </h4>  -->
                 </p>
               </div><!-- Menu Item -->
               
@@ -165,6 +167,7 @@
           <div class="tab-header text-center">
             <p>Menu</p>
             <h3>{{$cat->name}}</h3>
+            <br>
           </div>
 
           <div class="row gy-5">
@@ -175,14 +178,15 @@
 
               
             ?>
-              <div class="col-lg-4 menu-item">
-                <a href="{{$menu->image}}" class="glightbox"><img src="{{$menu->image}}" class="menu-img img-fluid" alt=""></a>
-                <h4>{{$menu->name}}</h4>
+                  <div class="col-lg-4 menu-item">
+                <a target="_blank" href="{{$menu->image}}" class="glightbox"><img src="{{$menu->image}}" class="menu-img img-fluid" alt=""></a>
+                <br> 
+                <h3 class="text-center">{{$menu->name}}</h3>
                 <p class="ingredients">
                 {{$menu->description}}
                 </p>
                 <p class="price">
-                <b>{{$menu->price}}</b> Kyats
+                    <!-- <h4 class="text-center">{{$menu->price}} Kyats </h4>  -->
                 </p>
               </div><!-- Menu Item -->
               

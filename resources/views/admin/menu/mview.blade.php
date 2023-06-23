@@ -35,8 +35,6 @@
                     <td><img src="{{$data->image}}" style="width:80px !important;height:80px !important;" alt=""></td>
                     <td>{{$data->price}} Ks</td>
                     <td>
-                            <button type="button" class="btn btn-sm btn-outline-primary">Update</button>
-                            <button type="button" class="btn btn-sm btn-outline-success">Detail</button>
                             <a href="/mmenu/{{$data->id}}/delete" onclick="return  confirm('Are You Sure To Delete This Category ?')" class="btn btn-sm btn-outline-danger">Delete</a>
                     </td>
                 </tr>
