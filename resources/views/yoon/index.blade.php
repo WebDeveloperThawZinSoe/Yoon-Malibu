@@ -75,9 +75,9 @@
                         <strong>Yoon Kitchen</strong></h2>
                     <p class="mbr-text mb-3 mbr-fonts-style display-7">
                         <?php 
-                           $content = DB::table("content")->where("id",1)->first();
+                           $content = DB::table("abouts")->where("id",1)->first();
                         ?>
-                       {!! $content->about !!}
+                       {!! $content->y_about !!}
                     </p>
                     <div class="mbr-section-btn"><a style="background-color:#a42826 !important" class="btn btn-secondary display-4" href="#menu">View Menu</a></div>
                 </div>
